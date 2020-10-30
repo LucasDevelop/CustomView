@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0f0"
+    tools:context=".MainActivity2">
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:layout_width="300dp"
+            android:background="#f00"
+            android:thumbOffset="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:layout_height="wrap_content"
+            android:thumb="@mipmap/ic_moment_thumb" />
+    </FrameLayout>
+
+    <com.cj.customwidget.widget.TextSeekBar
+        android:id="@+id/v_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:background="#f00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:text_bg="@mipmap/ic_shoot_beauty_level_bg"
+        app:text_color="#fff"
+        app:text_size="14sp" />
+
+    <com.cj.customwidget.widget.UploadProgressView
+        android:id="@+id/v_upload_progress"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_seekbar"
+        app:up_stroke_width="4dp"
+        app:up_status_color="#C0C0C0"
+        app:up_progress_color="#19D5AE"
+        app:up_progress_bg_color="#C0C0C0"
+        app:up_text_color="#19D5AE"
+        app:up_text_is_bold="true"
+        app:up_text_size="17sp" />
+
+    <ImageView
+        android:id="@+id/v_img"
+        android:background="#f00"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <LinearLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/v_succ"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="succ anim"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/v_fail"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="fail anim"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

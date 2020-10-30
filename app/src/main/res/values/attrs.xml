@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RecordProgressButton">
+        <!--        外圆颜色-->
+        <attr name="rpb_out_color" format="color" />
+        <!--        内圆颜色-->
+        <attr name="rpb_inner_color" format="color" />
+        <!--        进度条颜色-->
+        <attr name="rpb_progress_color" format="color" />
+        <!--        暂定内圆颜色-->
+        <!--        <attr name="rpb_inner_pause_color" format="color" />-->
+        <!--        外圆宽度-->
+        <attr name="rpb_out_width" format="dimension" />
+        <!--        内圆暂定按键的大小  宽==高-->
+        <attr name="rpb_pause_inner_size" format="dimension" />
+        <attr name="rpb_recording_inner_size" format="dimension" />
+        <attr name="rpb_static_inner_size" format="dimension" />
+        <attr name="rpb_static_out_size" format="dimension" />
+        <!--        当前进度-->
+        <attr name="rpb_progress" format="integer" />
+        <!--        最大进度-->
+        <attr name="rpb_max_progress" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ArcView">
+        <!--            两边弧度的高度-->
+        <attr name="radian_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TextSeekBar">
+        <attr name="text_bg" format="reference" />
+        <attr name="text_size" format="dimension" />
+        <attr name="text_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="UploadProgressView">
+        <attr name="up_text_size" format="dimension" />
+        <attr name="up_stroke_width" format="dimension" />
+        <attr name="up_progress_color" format="color" />
+        <attr name="up_progress_bg_color" format="color" />
+        <attr name="up_status_color" format="color" />
+        <attr name="up_text_color" format="color" />
+        <attr name="up_text_is_bold" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadowGroup" >
+        <attr name="shadowDX" format="dimension" />
+        <attr name="shadowDY" format="dimension" />
+        <attr name="shadowColor" format="color" />
+        <attr name="shadowRadius" format="dimension" />
+        <attr name="shadowMaxHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CropSeekBar">
+        <attr name="vc_slide_out_h" format="dimension"/>
+        <attr name="vc_radio" format="dimension"/>
+    </declare-styleable>
+</resources>

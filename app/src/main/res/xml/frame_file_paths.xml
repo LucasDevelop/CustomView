@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <!--详情见博客：https://www.jianshu.com/p/121bbb07cb07-->
+    <!--name 属性和 path 属性必填， name 表示共享文件的名字， path 代表文件路径。-->
+    <!--files-path 代表文件位于手机内部存储空间，访问效果如同 Context.getFilesDir()；-->
+    <!--它对应Context.getFilesDir返回的路径：eg:"/data/data/com.jph.simple/files"-->
+
+    <root-path
+        name="root"
+        path="" />
+
+    <files-path
+        name="files"
+        path="." />
+
+    <cache-path
+        name="cache"
+        path="." />
+
+    <external-path
+        name="external"
+        path="." />
+
+    <external-files-path
+        name="external_files"
+        path="." />
+    <!-- 此标签需要 support-v4:25.0.0以上才可以使用-->
+    <external-cache-path
+        name="external_cache"
+        path="." />
+
+</paths>

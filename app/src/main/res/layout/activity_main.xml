@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <Button
+        android:id="@+id/v_video_crop_seek"
+        android:layout_marginTop="10dp"
+        android:text="视频裁剪Seek Bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/v_shadow_view"
+        android:layout_marginTop="10dp"
+        android:text="Shadow view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/v_upload_progress"
+        android:layout_marginTop="10dp"
+        android:text="upload progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/v_scroll_close"
+        android:layout_marginTop="10dp"
+        android:text="Scroll close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.cj.customwidget.widget.SpreadView2
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+</LinearLayout>

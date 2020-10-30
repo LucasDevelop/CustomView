@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/v_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B5B4B4"
+    tools:context=".MainActivity4">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/v_target"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/v_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/img" />
+
+        <com.cj.customwidget.widget.RecordProgressButton
+            android:id="@+id/v_progress"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rpb_inner_color="#fff"
+            app:rpb_out_color="#81FFFFFF"
+            app:rpb_out_width="3dp"
+            app:rpb_pause_inner_size="60dp"
+            app:rpb_progress_color="#FF9F1A"
+            app:rpb_recording_inner_size="50dp"
+            app:rpb_static_inner_size="60dp"
+            app:rpb_static_out_size="70dp" />
+
+        <View
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/v_img_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/v_blur_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.cj.customwidget.widget.BlurringView
+        android:id="@+id/v_blur_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <ImageView
+        android:id="@+id/v_arc_view2"
+        android:scaleType="centerCrop"
+        android:layerType="hardware"
+        android:src="@mipmap/ic_bg_default"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"/>
+    <com.cj.customwidget.widget.ArcView
+        android:id="@+id/v_arc_view"
+        android:scaleType="centerCrop"
+        app:radian_height="20dp"
+        android:layerType="hardware"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"/>
+
+    <TextView
+        android:id="@+id/v_text"
+        android:text="dahsjdahdksa#Link dsadada"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
