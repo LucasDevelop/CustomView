@@ -37,14 +37,13 @@ class VideoCropSeekBar : FrameLayout {
     lateinit var seekBar: CropSeekBar
     private var coverRectF = RectF()
     private var picW = 80f//每张封面宽度--这并不是最终值，会根据控件长度调整
-     var videoDuration = 0L//视频时长
+    var videoDuration = 0L//视频时长
     var onSeekChange: (progress: Long) -> Unit = { }//当进度发生变化
     var onSectionChange: (left: Float, right: Float) -> Unit = { left, right -> }
     var onTouchChange: (isTouch: Boolean) -> Unit = {}
 
     private fun initView(context: Context, attrs: AttributeSet?) {
         coverView = LinearLayout(context)
-        coverView.setBackgroundColor(Color.RED)
         addView(coverView)
         seekBar = CropSeekBar(context).apply {
             layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
@@ -61,12 +60,12 @@ class VideoCropSeekBar : FrameLayout {
 
     //获取左侧滑块时间轴
     fun getLeftSlideSecond(): Long {
-        return (((seekBar.seekLeft - coverRectF.left+seekBar.slideW/2) / coverView.width) * videoDuration).toLong()
+        return (((seekBar.seekLeft - coverRectF.left + seekBar.slideW / 2) / coverView.width) * videoDuration).toLong()
     }
 
     //获取右侧滑块时间轴
     fun getRightSlideSecond(): Long {
-        return (((seekBar.seekRight - coverRectF.left-seekBar.slideW/2) / coverView.width) * videoDuration).toLong()
+        return (((seekBar.seekRight - coverRectF.left - seekBar.slideW / 2) / coverView.width) * videoDuration).toLong()
     }
 
     //设置视频资源
@@ -78,16 +77,19 @@ class VideoCropSeekBar : FrameLayout {
                 coverW = seekBar.seekRight - seekBar.seekLeft - seekBar.slideW
                 seekBar.maxInterval = videoDuration
             } else {
-                coverW = (videoDuration.toFloat() / seekBar.maxInterval) * (width - seekBar.slidePadding * 2-seekBar.slideW*2)
+                coverW =
+                    (videoDuration.toFloat() / seekBar.maxInterval) * (width - seekBar.slidePadding * 2 - seekBar.slideW * 2)
             }
-            val l = seekBar.slidePadding + seekBar.slideW
+
+            val coverMargin = seekBar.slidePadding + seekBar.slideW
             coverRectF.set(
-                l,
-                seekBar.slideOutH,
-                coverW + l,
-                height - seekBar.slideOutH
+                coverMargin,
+                seekBar.slideOutH + seekBar.strokeW,
+                coverW + coverMargin,
+                height - seekBar.slideOutH - seekBar.strokeW
             )
             invalidate()
+            onSectionChange(seekBar.seekLeft, seekBar.seekRight)
             thread {
                 try {
                     //计算需要获取多少张封面
@@ -141,7 +143,6 @@ class VideoCropSeekBar : FrameLayout {
                 retriever.setDataSource(videoPath)
             //获取视频长度
             videoDuration = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION).toLong()
-//            "videoDuration:$videoDuration".p()
             seekBar.invalidate()
             post { block.invoke(retriever) }
         }

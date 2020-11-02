@@ -5,12 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000"
+    android:orientation="vertical"
     tools:context=".page.VideoCropSeekActivity">
 
+    <TextView
+        android:id="@+id/v_time"
+        android:text="0s"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
     <FrameLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginTop="50dp">
+        android:layout_height="80dp">
 
         <com.cj.customwidget.widget.VideoCropSeekBar
             android:id="@+id/v_seekbar"

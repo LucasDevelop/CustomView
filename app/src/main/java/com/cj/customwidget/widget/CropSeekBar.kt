@@ -29,7 +29,7 @@ class CropSeekBar : View {
 
     private val color = Color.WHITE//边框颜色
     var slideW = 20f//两侧滑块宽度
-    private var strokeW = 4f//上下边框宽度
+    var strokeW = 4f//上下边框宽度
     var slideOutH = 10f//进度滑块越界高度
     var midSlideW = 8f//中间滑块宽度
     private var radio = 16f//圆角角度
@@ -38,8 +38,8 @@ class CropSeekBar : View {
     var midProgress = 0f//中间滑块的x坐标
     var seekLeft = 0f//左测滑块的x坐标
     var seekRight = 0f//右测滑块的x坐标
-    var maxInterval = 60L * 1000//最大区间-时长s
-    var minInterval = 10 * 1000//最小区间-时长s
+    var maxInterval = 60L * 1000//最大区间-时长ms
+    var minInterval = 10L * 1000//最小区间-时长ms
 
     private val strokeLinePaint = Paint()
     private val slidePaint = Paint()
