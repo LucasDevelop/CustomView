@@ -45,12 +45,12 @@ class VMStore : ViewModelStoreOwner {
             host.lifecycle.addObserver(object : LifecycleEventObserver {
                 override fun onStateChanged(source: LifecycleOwner, event: Lifecycle.Event) {
                     if (event == Lifecycle.Event.ON_DESTROY) {
+                        host.lifecycle.removeObserver(this)
                         bindTargets.remove(host)
                         if (bindTargets.isEmpty()) {//如果当前商店没有关联对象，则释放资源
                             vMStores.entries.find { it.value == this@VMStore }?.also {
                                 vmStore?.clear()
                                 vMStores.remove(it.key)
-                                "clear vMStores:${vMStores.size}".p()
                             }
                         }
                     }
