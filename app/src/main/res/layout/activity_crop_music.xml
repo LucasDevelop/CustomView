@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".page.CropMusicActivity">
+    <com.cj.customwidget.widget.MusicCropView
+        android:id="@+id/v_crop_music"
+        android:layout_width="match_parent"
+        android:background="#8056CDF1"
+        app:mc_line_color="#fff"
+        app:mc_line_progress_color="#14D2B8"
+        app:mc_line_w="3dp"
+        app:mc_line_min_h="17dp"
+        android:layout_height="50dp"/>
+    <TextView
+        android:id="@+id/v_time"
+        android:text="00:00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

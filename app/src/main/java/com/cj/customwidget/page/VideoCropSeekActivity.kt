@@ -1,10 +1,12 @@
 package com.cj.customwidget.page
 
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.cj.customwidget.R
 import com.cj.customwidget.p
 import kotlinx.android.synthetic.main.activity_video_crop_seek.*
+import java.io.File
 
 class VideoCropSeekActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +16,9 @@ class VideoCropSeekActivity : AppCompatActivity() {
             val selectTime = (v_seekbar.getRightSlideSecond() - v_seekbar.getLeftSlideSecond()).toFloat() / 1000
             v_time.text = "已选取$selectTime s"
         }
-//        v_seekbar.setVideoUri("/storage/emulated/0/Android/data/lxtx.im.app.debug/files/momentsCache/e3c72659bd837150604756aa082f059a.mp4")//15s
-        v_seekbar.setVideoUri("/storage/emulated/0/Android/data/lxtx.im.app.debug/files/momentsCache/VID_20201028_112656.mp4")//72s
+        v_seekbar.setVideoUri( Uri.parse(
+            "android.resource://".plus(packageName).plus(File.separator).plus(
+                R.raw.video
+            )))
     }
 }

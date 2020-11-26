@@ -3,6 +3,7 @@ package com.cj.customwidget
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.cj.customwidget.page.CropMusicActivity
 import com.cj.customwidget.page.ShadowActivity
 import com.cj.customwidget.page.VideoCropSeekActivity
 import com.cj.customwidget.page.viewmodel.VM1Activity
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         v_shadow_view.setOnClickListener { startActivity(Intent(this,ShadowActivity::class.java)) }
         v_upload_progress.setOnClickListener { startActivity(Intent(this,MainActivity2::class.java)) }
         v_viewmodel.setOnClickListener { startActivity(Intent(this,VM1Activity::class.java)) }
+        v_crop_music.setOnClickListener { startActivity(Intent(this,CropMusicActivity::class.java)) }
         v_scroll_close.setOnClickListener {
             startActivity(Intent(this,MainActivity2::class.java))
             startActivity(Intent(this,MainActivity3::class.java))

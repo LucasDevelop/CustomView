@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.RectF
 import android.media.MediaMetadataRetriever
+import android.net.Uri
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.widget.FrameLayout
@@ -60,16 +61,16 @@ class VideoCropSeekBar : FrameLayout {
 
     //获取左侧滑块时间轴
     fun getLeftSlideSecond(): Long {
-        return (((seekBar.seekLeft - coverRectF.left + seekBar.slideW / 2) / coverView.width) * videoDuration).toLong()
+        return (((seekBar.seekLeft - coverRectF.left+seekBar.slideW/2) / coverView.width) * videoDuration).toLong()
     }
 
     //获取右侧滑块时间轴
     fun getRightSlideSecond(): Long {
-        return (((seekBar.seekRight - coverRectF.left - seekBar.slideW / 2) / coverView.width) * videoDuration).toLong()
+        return (((seekBar.seekRight - coverRectF.left-seekBar.slideW/2) / coverView.width) * videoDuration).toLong()
     }
 
     //设置视频资源
-    fun setVideoUri(videoPath: String) {
+    fun setVideoUri(videoPath: Uri) {
         getVideoInfo(videoPath) { retriever ->
             //计算封面列表矩形大小和位置
             var coverW: Float
@@ -77,10 +78,8 @@ class VideoCropSeekBar : FrameLayout {
                 coverW = seekBar.seekRight - seekBar.seekLeft - seekBar.slideW
                 seekBar.maxInterval = videoDuration
             } else {
-                coverW =
-                    (videoDuration.toFloat() / seekBar.maxInterval) * (width - seekBar.slidePadding * 2 - seekBar.slideW * 2)
+                coverW = (videoDuration.toFloat() / seekBar.maxInterval) * (width - seekBar.slidePadding * 2-seekBar.slideW*2)
             }
-
             val coverMargin = seekBar.slidePadding + seekBar.slideW
             coverRectF.set(
                 coverMargin,
@@ -89,7 +88,8 @@ class VideoCropSeekBar : FrameLayout {
                 height - seekBar.slideOutH - seekBar.strokeW
             )
             invalidate()
-            onSectionChange(seekBar.seekLeft, seekBar.seekRight)
+            postDelayed({onSectionChange(seekBar.seekLeft,seekBar.seekRight)},1000)
+
             thread {
                 try {
                     //计算需要获取多少张封面
@@ -133,17 +133,18 @@ class VideoCropSeekBar : FrameLayout {
         }
     }
 
-    private fun getVideoInfo(videoPath: String, block: (MediaMetadataRetriever) -> Unit) {
+    private fun getVideoInfo(videoPath: Uri, block: (MediaMetadataRetriever) -> Unit) {
         thread {
             //解析视频参数
             val retriever = MediaMetadataRetriever()
-            if (videoPath.startsWith("http:") || videoPath.startsWith("https:"))
-                retriever.setDataSource(videoPath, HashMap<String, String>())//网络视频
-            else
-                retriever.setDataSource(videoPath)
+//            if (videoPath.startsWith("http:") || videoPath.startsWith("https:"))
+//                retriever.setDataSource(videoPath, HashMap<String, String>())//网络视频
+//            else
+                retriever.setDataSource(context,videoPath)
             //获取视频长度
             videoDuration = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION).toLong()
             seekBar.invalidate()
+            onSectionChange(seekBar.seekLeft,seekBar.seekRight)
             post { block.invoke(retriever) }
         }
     }

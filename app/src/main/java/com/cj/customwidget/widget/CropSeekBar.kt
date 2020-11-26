@@ -31,7 +31,7 @@ class CropSeekBar : View {
     var slideW = 20f//两侧滑块宽度
     var strokeW = 4f//上下边框宽度
     var slideOutH = 10f//进度滑块越界高度
-    var midSlideW = 8f//中间滑块宽度
+    private var midSlideW = 8f//中间滑块宽度
     private var radio = 16f//圆角角度
     val slidePadding = 100//两侧滑块外边距
 
@@ -234,5 +234,4 @@ class CropSeekBar : View {
         }
         return super.onTouchEvent(event)
     }
-
 }

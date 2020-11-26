@@ -55,4 +55,12 @@
         <attr name="vc_slide_out_h" format="dimension"/>
         <attr name="vc_radio" format="dimension"/>
     </declare-styleable>
+
+    <declare-styleable name="MusicCropView">
+        <attr name="mc_line_w" format="dimension"/>
+        <attr name="mc_line_max_h" format="dimension"/>
+        <attr name="mc_line_min_h" format="dimension"/>
+        <attr name="mc_line_color" format="color"/>
+        <attr name="mc_line_progress_color" format="color"/>
+    </declare-styleable>
 </resources>
