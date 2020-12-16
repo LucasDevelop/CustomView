@@ -63,4 +63,7 @@
         <attr name="mc_line_color" format="color"/>
         <attr name="mc_line_progress_color" format="color"/>
     </declare-styleable>
+    <declare-styleable name="StatusView">
+        <attr name="sv_empty_layout_id" format="reference"/>
+    </declare-styleable>
 </resources>

@@ -6,51 +6,64 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <Button
         android:id="@+id/v_video_crop_seek"
-        android:layout_marginTop="10dp"
-        android:text="视频裁剪Seek Bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="视频裁剪Seek Bar" />
 
     <Button
         android:id="@+id/v_shadow_view"
-        android:layout_marginTop="10dp"
-        android:text="Shadow view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Shadow view" />
 
     <Button
         android:id="@+id/v_upload_progress"
-        android:layout_marginTop="10dp"
-        android:text="upload progress"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="upload progress" />
 
     <Button
         android:id="@+id/v_scroll_close"
-        android:layout_marginTop="10dp"
-        android:text="Scroll close"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Scroll close" />
 
     <Button
         android:id="@+id/v_viewmodel"
-        android:layout_marginTop="10dp"
-        android:text="view model"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="view model" />
 
     <Button
         android:id="@+id/v_crop_music"
-        android:layout_marginTop="10dp"
-        android:text="Crop Music"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Crop Music" />
 
-<!--    <com.cj.customwidget.widget.SpreadView2-->
-<!--        android:layout_marginTop="100dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_width="200dp"-->
-<!--        android:layout_height="200dp"/>-->
+    <Button
+        android:id="@+id/v_looper_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Looper list" />
+    <com.cj.customwidget.widget.StatusView
+        android:id="@+id/v_sta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:sv_empty_layout_id="@layout/activity_v_m1" />
+
+    <!--    <com.cj.customwidget.widget.SpreadView2-->
+    <!--        android:layout_marginTop="100dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="200dp"/>-->
 </LinearLayout>

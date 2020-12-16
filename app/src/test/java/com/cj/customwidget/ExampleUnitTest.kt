@@ -3,6 +3,7 @@ package com.cj.customwidget
 import android.media.MediaTimestamp
 import android.util.Base64
 import androidx.annotation.IntRange
+import com.google.gson.Gson
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -27,7 +28,10 @@ class ExampleUnitTest {
 
     @Test
     fun test3() {
-        println(Math.round(1.123456))
+        val s = "{\"errcode\":0,\"errmsg\":\"学生上传提交课后作业成功\",\"returnMap\":\"homework submitted successfully\"}"
+        val fromJson = Gson().fromJson(s, TestBean::class.java)
+        println(fromJson)
+//        println(Math.round(1.123456))
 //        val java = ExampleUnitTest::class.java
 //        java.declaredFields.forEach {
 //           println(Collection::class.java.isAssignableFrom(it.type))

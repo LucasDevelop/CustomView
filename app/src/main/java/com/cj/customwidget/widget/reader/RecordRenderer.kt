@@ -1,5 +1,6 @@
 package com.cj.customwidget.widget.reader
 
+import android.annotation.SuppressLint
 import android.graphics.SurfaceTexture
 import android.opengl.GLES11Ext
 import android.opengl.GLES20
@@ -20,6 +21,7 @@ class RecordRenderer(val glSurfaceView: GLSurfaceView) : GLSurfaceView.Renderer 
     lateinit var surface:SurfaceTexture
     private lateinit var directDrawer: DirectDrawer
 
+    @SuppressLint("Recycle")
     override fun onSurfaceCreated(gl: GL10, config: EGLConfig?) {
         //得到view表面的纹理ID
         texId = createTextureId()
