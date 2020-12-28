@@ -47,7 +47,7 @@ fun Bitmap.roundedCorp(
     if (height / 2 < topLeft || height / 2 < topRight || height / 2 < bottomLeft || height / 2 < bottomRight) {
         return this
     }
-    Canvas(result).apply {
+    Canvas(result!!).apply {
         val paint = Paint()
         paint.isAntiAlias = true
         val rectF = Rect(0, 0, width, height)
@@ -86,5 +86,5 @@ fun Bitmap.roundedCorp(
         paint.xfermode = PorterDuffXfermode(PorterDuff.Mode.SRC_IN)//裁剪方式
         drawBitmap(this@roundedCorp, rectF, rectF, paint)
     }
-    return result!!
+    return result
 }

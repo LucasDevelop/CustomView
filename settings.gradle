@@ -1,2 +1,3 @@
+include ':OpenGL'
 include ':app'
 rootProject.name = "CustomWidget"

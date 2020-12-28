@@ -55,6 +55,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Looper list" />
+
+    <Button
+        android:id="@+id/v_falling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Falling" />
+    <Button
+        android:id="@+id/v_open_gl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Open GL" />
     <com.cj.customwidget.widget.StatusView
         android:id="@+id/v_sta"
         android:layout_width="match_parent"
