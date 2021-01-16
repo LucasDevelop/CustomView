@@ -64,7 +64,7 @@ class FallingAdapter : FallingView.IFallingAdapter<Int>(R.layout.item_redpack) {
             (holder.view as ImageView).setImageResource(R.mipmap.ic_readpack)
         }
         holder.config.startTime = holder.position * (animDuration / count)
-        holder.view.setOnClickListener {
+        holder.view.setOnClickListener {//点中红包回调
 //            holder.view.clearAnimation()
 //            holder.view.visibility = View.GONE
         }
@@ -81,7 +81,8 @@ class FallingAdapter : FallingView.IFallingAdapter<Int>(R.layout.item_redpack) {
             rotation = -30f*random.nextFloat()
         }
         val redPackAnim = RedPackAnim(path, rotation, holder.view)
-        redPackAnim.duration = animDuration
+        //动画时长-下落速度
+        redPackAnim.duration = (animDuration*(0.6+random.nextInt(4)*0.1)).toLong()
         return redPackAnim
     }
 

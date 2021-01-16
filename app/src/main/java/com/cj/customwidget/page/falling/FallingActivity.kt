@@ -21,12 +21,4 @@ class FallingActivity : AppCompatActivity() {
         v_falling.setAdapter(FallingAdapter().apply { setData(List(100){it}) })
         v_falling.startFalling()
     }
-
-    class TestAnim: Animation() {
-        override fun applyTransformation(interpolatedTime: Float, t: Transformation) {
-            super.applyTransformation(interpolatedTime, t)
-            "interpolatedTime:$interpolatedTime".p()
-        }
-    }
-
 }
