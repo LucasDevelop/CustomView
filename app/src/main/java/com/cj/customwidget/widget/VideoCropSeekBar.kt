@@ -2,7 +2,6 @@ package com.cj.customwidget.widget
 
 import android.content.Context
 import android.graphics.Bitmap
-import android.graphics.Color
 import android.graphics.RectF
 import android.media.MediaMetadataRetriever
 import android.net.Uri
@@ -11,7 +10,6 @@ import android.view.MotionEvent
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
-import com.cj.customwidget.p
 import java.lang.Exception
 import kotlin.concurrent.thread
 

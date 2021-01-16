@@ -1,4 +1,4 @@
-package com.cj.customwidget
+package com.cj.customwidget.ext
 
 import android.graphics.*
 import android.util.Log

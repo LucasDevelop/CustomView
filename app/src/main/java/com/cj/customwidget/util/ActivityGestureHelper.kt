@@ -1,6 +1,5 @@
 package com.cj.customwidget.util
 
-import android.app.Activity
 import android.content.Context
 import android.util.DisplayMetrics
 import android.view.MotionEvent
@@ -10,7 +9,6 @@ import androidx.activity.ComponentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
-import com.cj.customwidget.p
 import java.lang.ref.SoftReference
 import kotlin.math.abs
 

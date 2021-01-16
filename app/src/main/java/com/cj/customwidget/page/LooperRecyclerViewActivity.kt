@@ -3,7 +3,6 @@ package com.cj.customwidget.page
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
-import android.renderscript.RenderScript
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.cj.customwidget.R
-import com.cj.customwidget.p
+import com.cj.customwidget.ext.p
 import com.cj.customwidget.widget.LooperLinearLayoutManager
 import kotlinx.android.synthetic.main.activity_looper_recycler_view.*
 

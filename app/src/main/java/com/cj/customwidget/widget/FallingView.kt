@@ -12,7 +12,6 @@ import android.view.animation.Animation
 import android.widget.FrameLayout
 import androidx.annotation.LayoutRes
 import androidx.core.view.children
-import com.cj.customwidget.p
 
 /**
  * File FallingView.kt
@@ -25,10 +24,11 @@ class FallingView : FrameLayout, Runnable {
     private val TAG = FallingView::class.java.simpleName
     private var handlerTask = Handler()
     private var iFallingAdapter: IFallingAdapter<*>? = null
-    private var position = 0
-    private var startFallingTime = 0L
+    private var position = 0//当前item
+    private var fallingListener: OnFallingListener? = null
+    private var lastStartTime = 0L//最后一个item开始显示的延迟时间
 
-    private val cacheHolder = HashSet<Holder>()//缓存
+    private val cacheHolder = HashSet<Holder>()//缓存holder，用于复用，减少item view创建的个数
 
     constructor(context: Context) : super(context) {
         initView(context, null)
@@ -43,7 +43,7 @@ class FallingView : FrameLayout, Runnable {
     }
 
     private fun initView(context: Context, attrs: AttributeSet?) {
-//        setWillNotDraw(false)
+//        setWillNotDraw(false)//放开注释可显示辅助线
     }
 
     //开始飘落
@@ -52,7 +52,6 @@ class FallingView : FrameLayout, Runnable {
             Log.e(TAG, "iFallingAdapter not be null.")
             return
         }
-        startFallingTime = System.currentTimeMillis()
         position = 0
         handlerTask.post(this)
     }
@@ -67,8 +66,6 @@ class FallingView : FrameLayout, Runnable {
         removeAllViews()
     }
 
-    var lastStartTime = 0L
-
     override fun run() {
         iFallingAdapter?.also { adapter ->
             if (adapter.datas.isNullOrEmpty() || position > adapter.datas!!.size - 1) return
@@ -79,6 +76,9 @@ class FallingView : FrameLayout, Runnable {
     }
 
     private fun showItem(adapter: IFallingAdapter<*>) {
+        if (position == 0) {
+            fallingListener?.onStart()
+        }
         var holder: Holder
         if (cacheHolder.isEmpty()) {
             val inflate = LayoutInflater.from(context).inflate(adapter.layoutId, this, false)
@@ -100,13 +100,17 @@ class FallingView : FrameLayout, Runnable {
                 //将item加入缓存以复用
                 cacheHolder.add(holder)
                 removeView(holder.view)
-                "cacheHolder:${cacheHolder.size}".p()
+                if (childCount == 0 && adapter.datas?.size == position + 1) {
+                    fallingListener?.onStop()
+                }
+//                "cacheHolder:${cacheHolder.size}".p()
             }
 
             override fun onAnimationStart(animation: Animation?) {
             }
         })
         holder.view.startAnimation(holder.config.anim)
+        //显示完一个item后准备显示下一个item
         handlerTask.postDelayed(this, holder.config.startTime - lastStartTime)
         lastStartTime = holder.config.startTime
         position++
@@ -165,6 +169,16 @@ class FallingView : FrameLayout, Runnable {
         var startTime = 0L//开始发射时间
         var anim: Animation? = null
         var path: Path? = null
+    }
+
+    fun setOnFallingListener(onFallingListener: OnFallingListener) {
+        fallingListener = onFallingListener
+    }
+
+    interface OnFallingListener {
+        fun onStart()
+
+        fun onStop()
     }
 
 }

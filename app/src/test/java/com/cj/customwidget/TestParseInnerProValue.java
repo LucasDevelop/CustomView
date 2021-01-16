@@ -9,9 +9,18 @@ import java.lang.reflect.Field;
  * @des
  */
 class TestParseInnerProValue {
+
+
     public static void main(String[] args) {
-        Class<?> clasz = Goods.class;
-        printInnerParamValue(clasz);
+        String a = new String("22");
+        String b = "22";
+        System.out.println(a.equals(b));
+//        Class<?> clasz = Goods.class;
+//        printInnerParamValue(clasz);
+    }
+
+    public static <T> T send(){
+        return (T) "null";
     }
 
     public static void printInnerParamValue(Class<?> clasz){

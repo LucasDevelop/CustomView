@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".page.falling.FallingActivity"></activity>
+        <activity android:name=".ASMActivity"></activity>
+        <activity android:name=".page.falling.FallingActivity" />
         <activity android:name=".page.opengl.CameraReviewActivity" />
         <activity android:name=".page.opengl.OpenGLActivity" />
         <activity android:name=".page.LooperRecyclerViewActivity" />
@@ -31,28 +32,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity3" />
-        <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity2" />
-        <activity android:name=".GPUImageActivity" />
-        <activity android:name=".RecordActivity" />
-        <activity android:name=".MainActivity4">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
-        </activity>
 
-        <provider
-            android:name=".TestFileProvider"
-            android:authorities="com.cj.customwidge.momentProvider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/frame_file_paths" />
-        </provider>
+<!--        <provider-->
+<!--            android:name=".TestFileProvider"-->
+<!--            android:authorities="com.cj.customwidge.momentProvider"-->
+<!--            android:exported="false"-->
+<!--            android:grantUriPermissions="true">-->
+<!--            <meta-data-->
+<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                android:resource="@xml/frame_file_paths" />-->
+<!--        </provider>-->
     </application>
 
 </manifest>

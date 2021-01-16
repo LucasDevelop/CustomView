@@ -4,7 +4,7 @@ import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
-import com.cj.customwidget.p
+import com.cj.customwidget.ext.p
 import java.util.*
 
 class PathView:View {

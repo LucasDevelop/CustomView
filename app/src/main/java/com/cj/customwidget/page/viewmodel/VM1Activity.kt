@@ -3,9 +3,8 @@ package com.cj.customwidget.page.viewmodel
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
 import com.cj.customwidget.R
-import com.cj.customwidget.p
+import com.cj.customwidget.ext.p
 import kotlinx.android.synthetic.main.activity_v_m1.*
 
 class VM1Activity : AppCompatActivity() {

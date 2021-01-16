@@ -1,3 +1,4 @@
-include ':OpenGL'
+include ':myPlugin'
+//include ':OpenGL'
 include ':app'
 rootProject.name = "CustomWidget"

@@ -2,9 +2,8 @@ package com.cj.customwidget.page.viewmodel
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
 import com.cj.customwidget.R
-import com.cj.customwidget.p
+import com.cj.customwidget.ext.p
 
 class VM2Activity : AppCompatActivity() {
 

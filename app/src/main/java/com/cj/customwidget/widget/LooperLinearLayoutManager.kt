@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.cj.customwidget.p
+import com.cj.customwidget.ext.p
 
 /**
  * File LooperLinearLayoutManager.kt

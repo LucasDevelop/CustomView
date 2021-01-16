@@ -2,8 +2,6 @@ package com.cj.customwidget.page.viewmodel
 
 import androidx.activity.ComponentActivity
 import androidx.lifecycle.*
-import com.cj.customwidget.p
-import java.lang.Exception
 
 /**
  * @package    com.cj.customwidget.page.viewmodel

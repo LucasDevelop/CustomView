@@ -3,16 +3,14 @@ package com.cj.customwidget.widget
 import android.content.Context
 import android.graphics.*
 import android.media.MediaMetadataRetriever
-import android.os.Handler
 import android.util.AttributeSet
-import android.util.Log
 import android.view.MotionEvent
 import android.view.VelocityTracker
 import android.view.View
 import android.view.ViewConfiguration
 import android.widget.Scroller
 import com.cj.customwidget.R
-import com.cj.customwidget.p
+import com.cj.customwidget.ext.p
 import java.lang.Exception
 import kotlin.math.abs
 import kotlin.math.floor

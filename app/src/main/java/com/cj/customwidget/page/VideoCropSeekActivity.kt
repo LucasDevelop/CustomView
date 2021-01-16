@@ -4,7 +4,6 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.cj.customwidget.R
-import com.cj.customwidget.p
 import kotlinx.android.synthetic.main.activity_video_crop_seek.*
 import java.io.File
 

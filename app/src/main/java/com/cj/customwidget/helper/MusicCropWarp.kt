@@ -5,8 +5,7 @@ import android.net.Uri
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
-import com.cj.customwidget.helper.IAudioPlay
-import com.cj.customwidget.p
+import com.cj.customwidget.ext.p
 import com.cj.customwidget.widget.MusicCropView
 
 class MusicCropWarp(val owner: LifecycleOwner, val musicCropView: MusicCropView, val iAudioPlay: IAudioPlay) {

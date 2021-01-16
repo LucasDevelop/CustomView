@@ -2,13 +2,15 @@ package com.cj.customwidget
 
 import android.animation.ValueAnimator
 import android.graphics.BitmapFactory
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.LinearInterpolator
+import androidx.appcompat.app.AppCompatActivity
+import com.cj.customwidget.ext.CircleCorp
+import com.cj.customwidget.ext.p
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlin.concurrent.thread
 
-class MainActivity2 : BaseActivity() {
+class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)

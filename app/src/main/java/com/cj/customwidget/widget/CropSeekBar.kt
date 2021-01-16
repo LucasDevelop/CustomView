@@ -6,7 +6,6 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import com.cj.customwidget.R
-import com.cj.customwidget.p
 
 /**
  * @package    com.cj.customwidget.widget

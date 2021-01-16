@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.view.animation.Animation
 import android.widget.ImageView
 import com.cj.customwidget.R
-import com.cj.customwidget.p
 import com.cj.customwidget.widget.FallingView
 import java.util.*
 import kotlin.collections.ArrayList
@@ -66,7 +65,6 @@ class FallingAdapter : FallingView.IFallingAdapter<Int>(R.layout.item_redpack) {
         }
         holder.config.startTime = holder.position * (animDuration / count)
         holder.view.setOnClickListener {
-            "click".p()
 //            holder.view.clearAnimation()
 //            holder.view.visibility = View.GONE
         }
@@ -75,11 +73,19 @@ class FallingAdapter : FallingView.IFallingAdapter<Int>(R.layout.item_redpack) {
     override fun convertAnim(parent: ViewGroup, holder: FallingView.Holder): Animation {
         val path = createPath(parent, holder.position, holder.view)
         holder.config.path = path
-        val redPackAnim = RedPackAnim(path, 50f*random.nextFloat() - 14.3f, holder.view)
+        //旋转方向
+        val rotation:Float
+        if (random.nextInt(2)==0){
+            rotation = 30f*random.nextFloat()
+        }else{
+            rotation = -30f*random.nextFloat()
+        }
+        val redPackAnim = RedPackAnim(path, rotation, holder.view)
         redPackAnim.duration = animDuration
         return redPackAnim
     }
 
+    //区间
     class Interval(val start: Float, val end: Float) {
         fun getLength() = end - start
     }

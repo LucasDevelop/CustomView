@@ -1,12 +1,11 @@
 package com.cj.customwidget.util
 
-import android.graphics.Typeface
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.TextPaint
 import android.text.style.*
 import android.view.View
-import com.cj.customwidget.p
+import com.cj.customwidget.ext.p
 
 /**
  * @package    com.cj.impl.ext

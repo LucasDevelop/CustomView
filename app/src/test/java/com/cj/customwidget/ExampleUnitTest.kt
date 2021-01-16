@@ -24,7 +24,31 @@ import kotlin.collections.HashMap
  */
 class ExampleUnitTest {
 
-    private var list:List<String>?=null
+    @Test
+    fun test4() {
+        println(Random().nextFloat())
+//        TestParseInnerProValue.main(null)
+//        println(321414342131231L.formatMoney())
+    }
+
+    fun Long.formatMoney(): String {
+        val unit = 1000
+        if (this < unit) return this.toString()
+        var num = this
+        val result = StringBuilder()
+        while (num % unit > 0) {
+            val other = num % unit
+            num -= other
+            num /= unit
+            if (result.isNotEmpty())
+                result.insert(0, ",")
+            result.insert(0, other)
+            println(other)
+        }
+        return result.toString()
+    }
+
+    private var list: List<String>? = null
 
     @Test
     fun test3() {
@@ -71,7 +95,7 @@ class ExampleUnitTest {
             //获取差集
             val diffIndexs = List(7) { it }.toMutableList()
             diffIndexs.removeAll(indexs)
-            if (diffIndexs.isNotEmpty()){
+            if (diffIndexs.isNotEmpty()) {
                 stringBuilder.append(" ").append("(逢")
                 diffIndexs.forEach {
                     stringBuilder.append(weekStrs2[it])

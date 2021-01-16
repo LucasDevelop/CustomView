@@ -6,8 +6,7 @@ import android.text.*
 import android.text.style.ForegroundColorSpan
 import android.util.AttributeSet
 import android.widget.Toast
-import androidx.core.text.toSpannable
-import com.cj.customwidget.p
+import com.cj.customwidget.ext.p
 import java.util.regex.Pattern
 import kotlin.collections.ArrayList
 
