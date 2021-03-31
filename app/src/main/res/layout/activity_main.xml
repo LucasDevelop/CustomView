@@ -68,15 +68,41 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Open GL" />
-    <com.cj.customwidget.widget.StatusView
-        android:id="@+id/v_sta"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:sv_empty_layout_id="@layout/activity_v_m1" />
+<!--    <com.cj.customwidget.widget.StatusView-->
+<!--        android:id="@+id/v_sta"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:sv_empty_layout_id="@layout/activity_v_m1" />-->
 
     <!--    <com.cj.customwidget.widget.SpreadView2-->
     <!--        android:layout_marginTop="100dp"-->
     <!--        android:layout_gravity="center"-->
     <!--        android:layout_width="200dp"-->
     <!--        android:layout_height="200dp"/>-->
+<!--    <com.cj.customwidget.widget.MarqueTextView-->
+<!--        android:id="@+id/v_text"-->
+<!--        android:text="dhisahdisahdahdiahdiashdiahdashdashdihadhaihdisahdahdiahduisahdiusahdiahdiahdiusahdusa"-->
+<!--        android:layout_width="match_parent"-->
+<!--        app:delayTime="3000"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+    <com.cj.customwidget.widget.CustomTextView
+        app:match_string="*"
+        app:match_color="#f00"
+        android:text="*dsadsadadsadad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <com.cj.customwidget.widget.event.EventView2
+           android:id="@+id/v_vertical"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+
+       <com.cj.customwidget.widget.event.EventView1
+           android:id="@+id/v_horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+   </FrameLayout>
 </LinearLayout>

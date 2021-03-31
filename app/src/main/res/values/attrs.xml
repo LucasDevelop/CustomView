@@ -43,27 +43,52 @@
         <attr name="up_text_is_bold" format="boolean" />
     </declare-styleable>
 
-    <declare-styleable name="ShadowGroup" >
+    <declare-styleable name="ShadowGroup">
         <attr name="shadowDX" format="dimension" />
         <attr name="shadowDY" format="dimension" />
         <attr name="shadowColor" format="color" />
         <attr name="shadowRadius" format="dimension" />
         <attr name="shadowMaxHeight" format="dimension" />
+        <attr name="shadowBgColor" format="color" />
+        <attr name="indicatorOrientation" format="enum">
+            <enum name="top" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
     </declare-styleable>
 
     <declare-styleable name="CropSeekBar">
-        <attr name="vc_slide_out_h" format="dimension"/>
-        <attr name="vc_radio" format="dimension"/>
+        <attr name="vc_slide_out_h" format="dimension" />
+        <attr name="vc_radio" format="dimension" />
     </declare-styleable>
 
     <declare-styleable name="MusicCropView">
-        <attr name="mc_line_w" format="dimension"/>
-        <attr name="mc_line_max_h" format="dimension"/>
-        <attr name="mc_line_min_h" format="dimension"/>
-        <attr name="mc_line_color" format="color"/>
-        <attr name="mc_line_progress_color" format="color"/>
+        <attr name="mc_line_w" format="dimension" />
+        <attr name="mc_line_max_h" format="dimension" />
+        <attr name="mc_line_min_h" format="dimension" />
+        <attr name="mc_line_color" format="color" />
+        <attr name="mc_line_progress_color" format="color" />
     </declare-styleable>
     <declare-styleable name="StatusView">
-        <attr name="sv_empty_layout_id" format="reference"/>
+        <attr name="sv_empty_layout_id" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="MarqueTextView">
+        <attr name="delayTime" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="EventContainerView">
+        <attr name="event_type" format="enum">
+            <enum name="nul" value="0" />
+            <enum name="vertical" value="1" />
+            <enum name="horizontal" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomTextView">
+        <!--        匹配文本中的字符串,多个字符串用','隔开-->
+        <attr name="match_string" format="string" />
+        <!--        匹配命中的字符串的颜色-->
+        <attr name="match_color" format="color" />
     </declare-styleable>
 </resources>

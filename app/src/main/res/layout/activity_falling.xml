@@ -3,13 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".page.falling.FallingActivity">
 
-    <com.cj.customwidget.widget.FallingView
-        android:id="@+id/v_falling"
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/v_drawer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <com.cj.customwidget.widget.FallingView
+            android:id="@+id/v_falling"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/v_right"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#f00"
+            android:orientation="vertical" />
+    </androidx.drawerlayout.widget.DrawerLayout>
 
 </LinearLayout>

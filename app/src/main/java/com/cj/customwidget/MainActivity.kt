@@ -14,6 +14,7 @@ import com.cj.customwidget.page.VideoCropSeekActivity
 import com.cj.customwidget.page.falling.FallingActivity
 import com.cj.customwidget.page.opengl.OpenGLActivity
 import com.cj.customwidget.page.viewmodel.VM1Activity
+import com.example.opengl.GLMainActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -28,8 +29,7 @@ class MainActivity : AppCompatActivity() {
         v_viewmodel.setOnClickListener { startActivity(Intent(this,VM1Activity::class.java)) }
         v_crop_music.setOnClickListener { startActivity(Intent(this,CropMusicActivity::class.java)) }
         v_looper_list.setOnClickListener { startActivity(Intent(this,LooperRecyclerViewActivity::class.java)) }
-        v_open_gl.setOnClickListener { startActivity(Intent(this,OpenGLActivity::class.java)) }
+        v_open_gl.setOnClickListener { startActivity(Intent(this,GLMainActivity::class.java)) }
         v_falling.setOnClickListener { startActivity(Intent(this,FallingActivity::class.java)) }
-
     }
 }

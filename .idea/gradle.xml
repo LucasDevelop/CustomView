@@ -13,8 +13,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/OpenGL" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/myPlugin" />
+            <option value="$PROJECT_DIR$/native" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

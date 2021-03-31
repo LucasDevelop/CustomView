@@ -1,21 +1,17 @@
 package com.cj.customwidget
 
-import android.media.MediaTimestamp
-import android.util.Base64
 import androidx.annotation.IntRange
+import com.cj.customwidget.util.CompatibleUtil.p
 import com.google.gson.Gson
-import org.junit.Test
-
 import org.junit.Assert.*
-import java.lang.Exception
-import java.lang.StringBuilder
+import org.junit.Test
 import java.math.BigDecimal
-import java.net.URLConnection
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.concurrent.ConcurrentLinkedDeque
 import java.util.regex.Pattern
+import kotlin.Comparator
 import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -26,9 +22,32 @@ class ExampleUnitTest {
 
     @Test
     fun test4() {
-        println(Random().nextFloat())
+        val queue = ConcurrentLinkedDeque<Bean2>()
+        val random = Random()
+        List(10){
+            val element = Bean2(random.nextInt(5), random.nextInt(10).toLong())
+            queue.add(element)
+            println(element)
+            return@List it
+        }
+        val sortedWith = queue.sortedWith(Comparator<Bean2> { bean1, bean2 ->
+            var i = bean2.priority - bean1.priority
+            i = if (i == 0) (bean1.receiverTime - bean2.receiverTime).toInt() else i
+            i
+        })
+        println("排序后")
+        sortedWith.forEach { println(it) }
+//        println(Random().nextFloat())
+//        val temp =" 1 3 ەღ明月天࿐ 闪亮登场".replace("ە",".")
+//
+//        var temp2 ="ەღ".replace("ە",".")
+//        val encode = UnicodeUtil.ToDBC(temp2)
+//        println(temp)
+//        println(encode)
+//        println(" 1 3 "+encode+"闪亮登场")
+
 //        TestParseInnerProValue.main(null)
-//        println(321414342131231L.formatMoney())
+        println(5487001L.formatMoney())
     }
 
     fun Long.formatMoney(): String {
@@ -42,8 +61,18 @@ class ExampleUnitTest {
             num /= unit
             if (result.isNotEmpty())
                 result.insert(0, ",")
-            result.insert(0, other)
-            println(other)
+            if (num>1000){
+                //补零
+                if (other<10){
+                    result.insert(0, "00".plus(other))
+                }else if (other<100){
+                    result.insert(0, "0".plus(other))
+                }else{
+                    result.insert(0,other)
+                }
+            }else{
+                result.insert(0,other)
+            }
         }
         return result.toString()
     }
