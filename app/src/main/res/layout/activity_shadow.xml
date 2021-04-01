@@ -7,21 +7,12 @@
     android:background="#fff"
     tools:context=".page.ShadowActivity">
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/v_temp"
-            android:src="@mipmap/ic_launcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </FrameLayout>
-
         <com.cj.customwidget.widget.ShadowGroup
             android:id="@+id/v_shadow"
             android:layout_gravity="center"
             android:layout_width="200dp"
-            app:indicatorOrientation="top"
+            app:shadowIndicatorMargin="0.5"
+            app:shadowIndicatorOrientation="left"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -37,7 +28,7 @@
                     android:id="@+id/v_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="hiodhsdhoahdahdohdohdhoshdohdoaho"
+                    android:text="a b c d e f g h g f e d c b a"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

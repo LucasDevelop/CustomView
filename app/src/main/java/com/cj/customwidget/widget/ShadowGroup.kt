@@ -38,7 +38,6 @@ class ShadowGroup : FrameLayout {
     }
 
     private val shadowPaint = Paint()
-    private val shadowRectF = RectF()
     val path = Path()
     private val defPadding = 40f
     private var shadowDx = 0f
@@ -48,7 +47,7 @@ class ShadowGroup : FrameLayout {
     private var shadowColor = Color.parseColor("#22000000")
     private var bgColor = Color.WHITE//背景色
     private var indicatorOrientation = -1//指针方向
-    private var indicatorMargin = 50f//指针偏移量
+    private var indicatorMargin = 0.2f//指针偏移百分比（基于当前宽高）0~1
 
     private fun initView(context: Context, attrs: AttributeSet?) {
         attrs?.apply {
@@ -59,7 +58,9 @@ class ShadowGroup : FrameLayout {
             shadowMaxHeight = obtain.getDimension(R.styleable.ShadowGroup_shadowMaxHeight, shadowMaxHeight)
             shadowColor = obtain.getColor(R.styleable.ShadowGroup_shadowColor, shadowColor)
             bgColor = obtain.getColor(R.styleable.ShadowGroup_shadowBgColor, bgColor)
-            indicatorOrientation = obtain.getInt(R.styleable.ShadowGroup_indicatorOrientation, indicatorOrientation)
+            indicatorMargin = obtain.getFloat(R.styleable.ShadowGroup_shadowIndicatorMargin, indicatorMargin)
+            indicatorOrientation =
+                obtain.getInt(R.styleable.ShadowGroup_shadowIndicatorOrientation, indicatorOrientation)
             obtain.recycle()
         }
         //关闭硬件加速
@@ -68,59 +69,50 @@ class ShadowGroup : FrameLayout {
         shadowPaint.style = Paint.Style.FILL
         shadowPaint.color = bgColor
 
+        //设置padding防止子控件挡住投影
         setPadding(defPadding.toInt(), defPadding.toInt(), defPadding.toInt(), defPadding.toInt())
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-//        val sizeW = MeasureSpec.getSize(widthMeasureSpec)
-//        val modeW = MeasureSpec.getMode(widthMeasureSpec)
-//        var sizeH = MeasureSpec.getSize(heightMeasureSpec)
-//        val modeH = MeasureSpec.getMode(heightMeasureSpec)
-//        //增加控件大小，用于空出多余的空间显示阴影
-//        var newW: Int = widthMeasureSpec
-//        if (modeW == MeasureSpec.AT_MOST) {
-//            newW = MeasureSpec.makeMeasureSpec((sizeW + defPadding * 2).toInt(), modeW)
-//        }
-//        var newH = heightMeasureSpec
-//        if (modeH == MeasureSpec.AT_MOST) {
-//            newH = MeasureSpec.makeMeasureSpec((sizeH ).toInt(), modeH)
-//        }
-
-//        "sizeW:$sizeW,sizeH:$sizeH    newW:${sizeW + defPadding * 2},newH:${sizeH + defPadding * 2}".p()
-//        if (shadowMaxHeight > 0 && sizeH > shadowMaxHeight) {//限制最大高度
-//            sizeH = shadowMaxHeight.toInt()
-//            newH = MeasureSpec.makeMeasureSpec((sizeH + defPadding * 2).toInt(), modeH)
-//        }
-
-//        super.onMeasure(newW, newH)
-//        getChildAt(0).measure(widthMeasureSpec,heightMeasureSpec)
-
-        (getChildAt(0).layoutParams as LayoutParams).gravity = Gravity.CENTER
+        if (childCount > 1) {
+            throw IllegalArgumentException("ShadowGroup 只允许有一个子控件。")
+        }
+        if (childCount == 1)
+            (getChildAt(0).layoutParams as LayoutParams).gravity = Gravity.CENTER
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
     }
 
-    override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
-        super.onLayout(changed, left, top, right, bottom)
-//        shadowRectF.left = if (paddingLeft > 0) paddingLeft.toFloat() else defPadding
-//        shadowRectF.right = width.toFloat() - if (paddingRight > 0) paddingRight.toFloat() else defPadding
-//        shadowRectF.top = if (paddingTop > 0) paddingTop.toFloat() else defPadding
-//        shadowRectF.bottom = height.toFloat() - if (paddingBottom > 0) paddingBottom.toFloat() else defPadding
-        //让子控件居中
-//        getChildAt(0).apply {
-//            layout(defPadding.toInt(),defPadding.toInt(), (defPadding+measuredWidth).toInt(),
-//                (defPadding+measuredHeight).toInt()
-//            )
-//        }
+    override fun dispatchDraw(canvas: Canvas) {
+        var indMargin = 0   //指针偏移量
+        when (indicatorOrientation) {
+            ORIENTATION_TOP, ORIENTATION_BOTTOM -> {
+                indMargin = (indicatorMargin * width).toInt()
+            }
+            ORIENTATION_LEFT, ORIENTATION_RIGHT -> {
+                indMargin = (indicatorMargin * height).toInt()
+            }
+        }
 
+        //指针大小
+        val indicatorH = defPadding * 0.4
+        val indicatorW = defPadding * 0.8
+
+        shadowPaint.setShadowLayer(shadowRadius, shadowDx, shadowDy, shadowColor)
+        //绘制形状
         path.moveTo(defPadding, defPadding + shadowRadius)
         path.quadTo(defPadding, defPadding, defPadding + shadowRadius, defPadding)
-        if (indicatorOrientation == ORIENTATION_TOP) {
-            path.lineTo(defPadding + indicatorMargin, defPadding)
-            path.lineTo(defPadding + indicatorMargin + 15, defPadding / 2)
-            path.lineTo(defPadding + indicatorMargin + 30, defPadding)
+        if (indicatorOrientation == ORIENTATION_TOP) {//top指针
+            path.lineTo(indMargin - defPadding / 2, defPadding)
+            path.lineTo((indMargin - defPadding / 2 + indicatorH).toFloat(), defPadding / 2)
+            path.lineTo((indMargin - defPadding / 2 + indicatorW).toFloat(), defPadding)
         }
         path.lineTo(width - defPadding - shadowRadius, defPadding)
         path.quadTo(width - defPadding, defPadding, width - defPadding, defPadding + shadowRadius)
+        if (indicatorOrientation == ORIENTATION_RIGHT) {//right指针
+            path.lineTo(width - defPadding, indMargin - defPadding / 2)
+            path.lineTo(width - defPadding/2, (indMargin - defPadding / 2 + indicatorH).toFloat())
+            path.lineTo(width - defPadding, (indMargin - defPadding / 2 + indicatorW).toFloat())
+        }
         path.lineTo(width - defPadding, height - defPadding - shadowRadius)
         path.quadTo(
             width - defPadding,
@@ -128,28 +120,20 @@ class ShadowGroup : FrameLayout {
             width - defPadding - shadowRadius,
             height - defPadding
         )
+        if (indicatorOrientation == ORIENTATION_BOTTOM) {//bottom指针
+            path.lineTo(indMargin - defPadding / 2, height - defPadding)
+            path.lineTo((indMargin - defPadding / 2 + indicatorH).toFloat(), height - defPadding / 2)
+            path.lineTo((indMargin - defPadding / 2 + indicatorW).toFloat(),height -  defPadding)
+        }
         path.lineTo(defPadding + shadowRadius, height - defPadding)
         path.quadTo(defPadding, height - defPadding, defPadding, height - defPadding - shadowRadius)
+        if (indicatorOrientation == ORIENTATION_LEFT) {//left指针
+            path.lineTo( defPadding, indMargin - defPadding / 2)
+            path.lineTo(defPadding/2, (indMargin - defPadding / 2 + indicatorH).toFloat())
+            path.lineTo( defPadding, (indMargin - defPadding / 2 + indicatorW).toFloat())
+        }
         path.lineTo(defPadding, defPadding + shadowRadius)
-
-        //切割
-
-
-//        getChildAt(0).outlineProvider = object :ViewOutlineProvider(){
-//            override fun getOutline(view: View, outline: Outline) {
-////                outline.setConvexPath(path)
-//                outline.setOval(0,0,view.width,view.height)
-//            }
-//        }
-//        getChildAt(0).clipToOutline = true
-    }
-
-    override fun dispatchDraw(canvas: Canvas) {
-        shadowPaint.setShadowLayer(shadowRadius, shadowDx, shadowDy, shadowColor)
-//        canvas.drawRoundRect(shadowRectF, shadowRadius, shadowRadius, shadowPaint)
-
         canvas.drawPath(path, shadowPaint)
-//        canvas.save()
         super.dispatchDraw(canvas)
     }
 }

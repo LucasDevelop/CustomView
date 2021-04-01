@@ -50,7 +50,8 @@
         <attr name="shadowRadius" format="dimension" />
         <attr name="shadowMaxHeight" format="dimension" />
         <attr name="shadowBgColor" format="color" />
-        <attr name="indicatorOrientation" format="enum">
+        <attr name="shadowIndicatorMargin" format="float" />
+        <attr name="shadowIndicatorOrientation" format="enum">
             <enum name="top" value="0" />
             <enum name="left" value="1" />
             <enum name="right" value="2" />
