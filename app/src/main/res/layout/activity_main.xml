@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,102 +7,72 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/v_video_crop_seek"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="视频裁剪Seek Bar" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/v_shadow_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Shadow view" />
+        <Button
+            android:id="@+id/v_video_crop_seek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="视频裁剪Seek Bar" />
 
-    <Button
-        android:id="@+id/v_upload_progress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="upload progress" />
+        <Button
+            android:id="@+id/v_shadow_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Shadow view" />
 
-    <Button
-        android:id="@+id/v_scroll_close"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Scroll close" />
+        <Button
+            android:id="@+id/v_upload_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="upload progress" />
 
-    <Button
-        android:id="@+id/v_viewmodel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="view model" />
+        <Button
+            android:id="@+id/v_scroll_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Scroll close" />
 
-    <Button
-        android:id="@+id/v_crop_music"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Crop Music" />
+        <Button
+            android:id="@+id/v_viewmodel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="view model" />
 
-    <Button
-        android:id="@+id/v_looper_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Looper list" />
+        <Button
+            android:id="@+id/v_crop_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Crop Music" />
 
-    <Button
-        android:id="@+id/v_falling"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Falling" />
-    <Button
-        android:id="@+id/v_open_gl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Open GL" />
-<!--    <com.cj.customwidget.widget.StatusView-->
-<!--        android:id="@+id/v_sta"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        app:sv_empty_layout_id="@layout/activity_v_m1" />-->
+        <Button
+            android:id="@+id/v_looper_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Looper list" />
 
-    <!--    <com.cj.customwidget.widget.SpreadView2-->
-    <!--        android:layout_marginTop="100dp"-->
-    <!--        android:layout_gravity="center"-->
-    <!--        android:layout_width="200dp"-->
-    <!--        android:layout_height="200dp"/>-->
-<!--    <com.cj.customwidget.widget.MarqueTextView-->
-<!--        android:id="@+id/v_text"-->
-<!--        android:text="dhisahdisahdahdiahdiashdiahdashdashdihadhaihdisahdahdiahduisahdiusahdiahdiahdiusahdusa"-->
-<!--        android:layout_width="match_parent"-->
-<!--        app:delayTime="3000"-->
-<!--        android:layout_height="wrap_content"/>-->
+        <Button
+            android:id="@+id/v_falling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Falling" />
 
-    <com.cj.customwidget.widget.CustomTextView
-        app:match_string="*"
-        app:match_color="#f00"
-        android:text="*dsadsadadsadad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-   <FrameLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
-       <com.cj.customwidget.widget.event.EventView2
-           android:id="@+id/v_vertical"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"/>
-
-       <com.cj.customwidget.widget.event.EventView1
-           android:id="@+id/v_horizontal"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"/>
-   </FrameLayout>
-</LinearLayout>
+        <Button
+            android:id="@+id/v_open_gl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Open GL" />
+    </LinearLayout>
+</RelativeLayout>

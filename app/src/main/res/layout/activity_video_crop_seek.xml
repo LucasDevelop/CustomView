@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp">
 
-        <com.cj.customwidget.widget.VideoCropSeekBar
+        <com.cj.customwidget.widget.videocrop.VideoCropSeekBar
             android:id="@+id/v_seekbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

@@ -17,9 +17,7 @@ class CropMusicActivity : AppCompatActivity() {
         val musicCropWarp = MusicCropWarp(this, v_crop_music, MediaPlayerAudioPlay())
         musicCropWarp.startPlay(this,
             Uri.parse(
-            "android.resource://".plus(packageName).plus(File.separator).plus(
-                R.raw.audio
-            )
+            "android.resource://".plus(packageName).plus(File.separator).plus(R.raw.audio)
         ))
         musicCropWarp.onStartProgressChange = {
             v_time.text = "从 ${formatTime(it/1000)} 开始"

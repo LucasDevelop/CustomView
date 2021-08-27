@@ -1,10 +1,11 @@
 package com.cj.customwidget
 
 import androidx.annotation.IntRange
-import com.cj.customwidget.util.CompatibleUtil.p
 import com.google.gson.Gson
+import com.google.gson.internal.LinkedTreeMap
 import org.junit.Assert.*
 import org.junit.Test
+import java.io.FileInputStream
 import java.math.BigDecimal
 import java.text.SimpleDateFormat
 import java.util.*
@@ -21,10 +22,71 @@ import kotlin.collections.ArrayList
 class ExampleUnitTest {
 
     @Test
+    fun time() {
+//        val dateFormat = SimpleDateFormat("yyyy/MM/dd", Locale("ar"))
+//        val format = dateFormat.format(Date())
+//        println(format)
+//       println( SimpleDateFormat("yyyy/MM/dd",Locale("ar")).format(Date()))
+
+//        val list = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12)
+//        val size = 3
+//        val count = (list.size / size) + 1
+//        for (i in 0 until count) {
+//            var toIndex = (i + 1) * size
+//            if (toIndex > list.size) toIndex = list.size
+//            val copyOfRange = list.copyOfRange(i * size, toIndex)
+//            println(copyOfRange.toMutableList())
+//        }
+//        val temp = "12:42:B4:04:61:17:20:E7:10:ED:55:6C:6F:5C:33:17:E1:AF:5A:1F:F9:74:5E:7F:5A:73:87:D0:90:28:C9:3E"
+//        val temp = "BF:20:18:C3:ED:75:24:9C:D8:41:EE:9F:94:F8:D7:82:FB:4B:E2:05"
+//        val temp = "B1:CE:74:43:60:9D:CF:7B:D5:AA:F5:EB:4F:52:83:44"
+//        val message = temp.replace(":", "")
+//        println(message)
+//        println(message.length)
+
+        println((0x10 or 2))
+    }
+
+
+    @Test
+    fun city() {
+        val codeFileInputStream =
+            FileInputStream("/Users/lucas/Documents/developer/sample/CustomView/app/src/test/java/com/cj/customwidget/code2.json")
+        val countryFileInputStream =
+            FileInputStream("/Users/lucas/Documents/developer/sample/CustomView/app/src/test/java/com/cj/customwidget/country.json")
+        val gson = Gson()
+        val codeString = String(codeFileInputStream.readBytes())
+        val countryString = String(countryFileInputStream.readBytes())
+        val codes = gson.fromJson<List<LinkedTreeMap<String, Any>>>(codeString, List::class.java)
+        val countrys = gson.fromJson(countryString, TestBean::class.java)
+        val arrayList = ArrayList<TestBean.AreaList.List>()
+        countrys.areaList.forEach {
+            arrayList.addAll(it.list)
+        }
+//        countrys.forEach { country->
+//            country.iso = codes.find { it.en == country.country }?.iso?:0
+//        }
+        val iterator = codes.iterator()
+        while (iterator.hasNext()) {
+            val next = iterator.next()
+            var value = arrayList.find { it.enName == next["en"] }?.code ?: "0"
+            if (value == "0") {
+                value = arrayList.find { it.zhName == next["zh"] }?.code ?: "0"
+            }
+            next.put("iso", value)
+//            next["code"] =  Integer.getInteger(next["code"].toString().replace(".0",""))
+//            next["iso"] =  Integer.getInteger(next["iso"].toString().replace(".0",""))
+//            next.iso = countrys.find { it.country == next.en }?.iso?:0
+        }
+        println(gson.toJson(codes))
+    }
+
+
+    @Test
     fun test4() {
         val queue = ConcurrentLinkedDeque<Bean2>()
         val random = Random()
-        List(10){
+        List(10) {
             val element = Bean2(random.nextInt(5), random.nextInt(10).toLong())
             queue.add(element)
             println(element)
@@ -61,17 +123,17 @@ class ExampleUnitTest {
             num /= unit
             if (result.isNotEmpty())
                 result.insert(0, ",")
-            if (num>1000){
+            if (num > 1000) {
                 //补零
-                if (other<10){
+                if (other < 10) {
                     result.insert(0, "00".plus(other))
-                }else if (other<100){
+                } else if (other < 100) {
                     result.insert(0, "0".plus(other))
-                }else{
-                    result.insert(0,other)
+                } else {
+                    result.insert(0, other)
                 }
-            }else{
-                result.insert(0,other)
+            } else {
+                result.insert(0, other)
             }
         }
         return result.toString()

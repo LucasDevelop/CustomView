@@ -15,6 +15,5 @@ class CameraReviewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camera_review)
-        Camera.CameraInfo.CAMERA_FACING_BACK
     }
 }

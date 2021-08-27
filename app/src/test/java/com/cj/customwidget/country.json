@@ -1,0 +1,1334 @@
+{
+    "areaList": [
+        {
+            "indexChar": "A",
+            "list": [
+                {
+                    "zhName": "阿尔巴尼亚",
+                    "enName": "Albania",
+                    "code": "008"
+                },
+                {
+                    "zhName": "阿尔及利亚",
+                    "enName": "Algeria",
+                    "code": "012"
+                },
+                {
+                    "zhName": "阿富汗",
+                    "enName": "Afghanistan",
+                    "code": "004"
+                },
+                {
+                    "zhName": "阿根廷",
+                    "enName": "Argentina",
+                    "code": "032"
+                },
+                {
+                    "zhName": "阿拉伯联合酋长国",
+                    "enName": "United Arab Emirates",
+                    "code": "784"
+                },
+                {
+                    "zhName": "阿鲁巴",
+                    "enName": "Aruba",
+                    "code": "533"
+                },
+                {
+                    "zhName": "阿曼",
+                    "enName": "Oman",
+                    "code": "512"
+                },
+                {
+                    "zhName": "阿塞拜疆",
+                    "enName": "Azerbaijan",
+                    "code": "031"
+                },
+                {
+                    "zhName": "爱尔兰",
+                    "enName": "Ireland",
+                    "code": "372"
+                },
+                {
+                    "zhName": "埃及",
+                    "enName": "Egypt",
+                    "code": "818"
+                },
+                {
+                    "zhName": "埃塞俄比亚",
+                    "enName": "Ethiopia",
+                    "code": "231"
+                },
+                {
+                    "zhName": "爱沙尼亚",
+                    "enName": "Estonia",
+                    "code": "233"
+                },
+                {
+                    "zhName": "安道尔",
+                    "enName": "Andorra",
+                    "code": "020"
+                },
+                {
+                    "zhName": "安哥拉",
+                    "enName": "Angola",
+                    "code": "024"
+                },
+                {
+                    "zhName": "安圭拉",
+                    "enName": "Anguilla",
+                    "code": "660"
+                },
+                {
+                    "zhName": "安提瓜和巴布达",
+                    "enName": "Antigua and Barbuda",
+                    "code": "028"
+                },
+                {
+                    "zhName": "澳大利亚",
+                    "enName": "Australia",
+                    "code": "036"
+                },
+                {
+                    "zhName": "奥地利",
+                    "enName": "Austria",
+                    "code": "040"
+                },
+                {
+                    "zhName": "奥兰群岛",
+                    "enName": "Aland Islands",
+                    "code": "248"
+                }
+            ]
+        },
+        {
+            "indexChar": "B",
+            "list": [
+                {
+                    "zhName": "巴巴多斯",
+                    "enName": "Barbados",
+                    "code": "052"
+                },
+                {
+                    "zhName": "巴布亚新几内亚",
+                    "enName": "Papua New Guinea",
+                    "code": "598"
+                },
+                {
+                    "zhName": "巴哈马",
+                    "enName": "Bahamas",
+                    "code": "044"
+                },
+                {
+                    "zhName": "巴基斯坦",
+                    "enName": "Pakistan",
+                    "code": "586"
+                },
+                {
+                    "zhName": "巴拉圭",
+                    "enName": "Paraguay",
+                    "code": "600"
+                },
+                {
+                    "zhName": "巴勒斯坦",
+                    "enName": "Palestinian Territory (the Occupied)",
+                    "code": "275"
+                },
+                {
+                    "zhName": "巴林",
+                    "enName": "Bahrain",
+                    "code": "048"
+                },
+                {
+                    "zhName": "巴拿马",
+                    "enName": "Panama",
+                    "code": "591"
+                },
+                {
+                    "zhName": "巴西",
+                    "enName": "Brazil",
+                    "code": "076"
+                },
+                {
+                    "zhName": "白俄罗斯",
+                    "enName": "Belarus",
+                    "code": "112"
+                },
+                {
+                    "zhName": "百慕大",
+                    "enName": "Bermuda",
+                    "code": "060"
+                },
+                {
+                    "zhName": "保加利亚",
+                    "enName": "Bulgaria",
+                    "code": "100"
+                },
+                {
+                    "zhName": "北马里亚纳",
+                    "enName": "Northern Mariana Islands",
+                    "code": "580"
+                },
+                {
+                    "zhName": "贝宁",
+                    "enName": "Benin",
+                    "code": "204"
+                },
+                {
+                    "zhName": "比利时",
+                    "enName": "Belgium",
+                    "code": "056"
+                },
+                {
+                    "zhName": "冰岛",
+                    "enName": "Iceland",
+                    "code": "352"
+                },
+                {
+                    "zhName": "博茨瓦纳",
+                    "enName": "Botswana",
+                    "code": "072"
+                },
+                {
+                    "zhName": "波多黎各",
+                    "enName": "Puerto Rico",
+                    "code": "630"
+                },
+                {
+                    "zhName": "波黑",
+                    "enName": "Bosnia and Herzegovina",
+                    "code": "070"
+                },
+                {
+                    "zhName": "波兰",
+                    "enName": "Poland",
+                    "code": "616"
+                },
+                {
+                    "zhName": "玻利维亚",
+                    "enName": "Bolivia",
+                    "code": "068"
+                },
+                {
+                    "zhName": "伯利兹",
+                    "enName": "Belize",
+                    "code": "084"
+                },
+                {
+                    "zhName": "不丹",
+                    "enName": "Bhutan",
+                    "code": "064"
+                },
+                {
+                    "zhName": "布基纳法索",
+                    "enName": "Burkina Faso",
+                    "code": "854"
+                },
+                {
+                    "zhName": "布隆迪",
+                    "enName": "Burundi",
+                    "code": "108"
+                },
+                {
+                    "zhName": "布维岛",
+                    "enName": "Bouvet Island",
+                    "code": "074"
+                }
+            ]
+        },
+        {
+            "indexChar": "C",
+            "list": [
+                {
+                    "zhName": "朝鲜",
+                    "enName": "Korea (the Democratic People's Republic of)",
+                    "code": "408"
+                },
+                {
+                    "zhName": "赤道几内亚",
+                    "enName": "Equatorial Guinea",
+                    "code": "226"
+                }
+            ]
+        },
+        {
+            "indexChar": "D",
+            "list": [
+                {
+                    "zhName": "丹麦",
+                    "enName": "Denmark",
+                    "code": "208"
+                },
+                {
+                    "zhName": "德国",
+                    "enName": "Germany",
+                    "code": "276"
+                },
+                {
+                    "zhName": "东帝汶",
+                    "enName": "Timor-Leste",
+                    "code": "626"
+                },
+                {
+                    "zhName": "多哥",
+                    "enName": "Togo",
+                    "code": "768"
+                },
+                {
+                    "zhName": "多米尼加",
+                    "enName": "Dominican Republic",
+                    "code": "214"
+                },
+                {
+                    "zhName": "多米尼克",
+                    "enName": "Dominica",
+                    "code": "212"
+                }
+            ]
+        },
+        {
+            "indexChar": "E",
+            "list": [
+                {
+                    "zhName": "厄瓜多尔",
+                    "enName": "Ecuador",
+                    "code": "218"
+                },
+                {
+                    "zhName": "厄立特里亚",
+                    "enName": "Eritrea",
+                    "code": "232"
+                },
+                {
+                    "zhName": "俄罗斯联邦",
+                    "enName": "Russian Federation",
+                    "code": "643"
+                }
+            ]
+        },
+        {
+            "indexChar": "F",
+            "list": [
+                {
+                    "zhName": "法国",
+                    "enName": "France",
+                    "code": "250"
+                },
+                {
+                    "zhName": "法罗群岛",
+                    "enName": "Faroe Islands",
+                    "code": "234"
+                },
+                {
+                    "zhName": "法属波利尼西亚",
+                    "enName": "French Polynesia",
+                    "code": "258"
+                },
+                {
+                    "zhName": "法属圭亚那",
+                    "enName": "French Guiana",
+                    "code": "254"
+                },
+                {
+                    "zhName": "法属南部领地",
+                    "enName": "French Southern Territories",
+                    "code": "260"
+                },
+                {
+                    "zhName": "梵蒂冈",
+                    "enName": "Holy See",
+                    "code": "336"
+                },
+                {
+                    "zhName": "斐济",
+                    "enName": "Fiji",
+                    "code": "242"
+                },
+                {
+                    "zhName": "菲律宾",
+                    "enName": "Philippines",
+                    "code": "608"
+                },
+                {
+                    "zhName": "芬兰",
+                    "enName": "Finland",
+                    "code": "246"
+                },
+                {
+                    "zhName": "佛得角",
+                    "enName": "Cape Verde",
+                    "code": "132"
+                },
+                {
+                    "zhName": "福克兰群岛（马尔维纳斯）",
+                    "enName": "Falkland Islands [Malvinas]",
+                    "code": "238"
+                }
+            ]
+        },
+        {
+            "indexChar": "G",
+            "list": [
+                {
+                    "zhName": "冈比亚",
+                    "enName": "Gambia",
+                    "code": "270"
+                },
+                {
+                    "zhName": "刚果（布）",
+                    "enName": "Congo",
+                    "code": "178"
+                },
+                {
+                    "zhName": "刚果（金）",
+                    "enName": "Congo (the Democratic Republic of the)",
+                    "code": "180"
+                },
+                {
+                    "zhName": "格恩西岛",
+                    "enName": "Guernsey",
+                    "code": "831"
+                },
+                {
+                    "zhName": "格林纳达",
+                    "enName": "Grenada",
+                    "code": "308"
+                },
+                {
+                    "zhName": "格陵兰",
+                    "enName": "Greenland",
+                    "code": "304"
+                },
+                {
+                    "zhName": "格鲁吉亚",
+                    "enName": "Georgia",
+                    "code": "268"
+                },
+                {
+                    "zhName": "哥伦比亚",
+                    "enName": "Colombia",
+                    "code": "170"
+                },
+                {
+                    "zhName": "哥斯达黎加",
+                    "enName": "Costa Rica",
+                    "code": "188"
+                },
+                {
+                    "zhName": "古巴",
+                    "enName": "Cuba",
+                    "code": "192"
+                },
+                {
+                    "zhName": "瓜德罗普",
+                    "enName": "Guadeloupe",
+                    "code": "312"
+                },
+                {
+                    "zhName": "关岛",
+                    "enName": "Guam",
+                    "code": "316"
+                },
+                {
+                    "zhName": "圭亚那",
+                    "enName": "Guyana",
+                    "code": "328"
+                }
+            ]
+        },
+        {
+            "indexChar": "H",
+            "list": [
+                {
+                    "zhName": "哈萨克斯坦",
+                    "enName": "Kazakhstan",
+                    "code": "398"
+                },
+                {
+                    "zhName": "海地",
+                    "enName": "Haiti",
+                    "code": "332"
+                },
+                {
+                    "zhName": "韩国",
+                    "enName": "Korea (the Republic of)",
+                    "code": "410"
+                },
+                {
+                    "zhName": "赫德岛和麦克唐纳岛",
+                    "enName": "Heard Island and McDonald Islands",
+                    "code": "334"
+                },
+                {
+                    "zhName": "荷兰",
+                    "enName": "Netherlands",
+                    "code": "528"
+                },
+                {
+                    "zhName": "荷属安的列斯",
+                    "enName": "Netherlands Antilles",
+                    "code": "530"
+                },
+                {
+                    "zhName": "黑山",
+                    "enName": "Montenegro",
+                    "code": "499"
+                },
+                {
+                    "zhName": "洪都拉斯",
+                    "enName": "Honduras",
+                    "code": "340"
+                }
+            ]
+        },
+        {
+            "indexChar": "J",
+            "list": [
+                {
+                    "zhName": "吉布提",
+                    "enName": "Djibouti",
+                    "code": "262"
+                },
+                {
+                    "zhName": "吉尔吉斯斯坦",
+                    "enName": "Kyrgyzstan",
+                    "code": "417"
+                },
+                {
+                    "zhName": "基里巴斯",
+                    "enName": "Kiribati",
+                    "code": "296"
+                },
+                {
+                    "zhName": "几内亚",
+                    "enName": "Guinea",
+                    "code": "324"
+                },
+                {
+                    "zhName": "几内亚比绍",
+                    "enName": "Guinea-Bissau",
+                    "code": "624"
+                },
+                {
+                    "zhName": "加纳",
+                    "enName": "Ghana",
+                    "code": "288"
+                },
+                {
+                    "zhName": "加拿大",
+                    "enName": "Canada",
+                    "code": "124"
+                },
+                {
+                    "zhName": "加蓬",
+                    "enName": "Gabon",
+                    "code": "266"
+                },
+                {
+                    "zhName": "柬埔寨",
+                    "enName": "Cambodia",
+                    "code": "116"
+                },
+                {
+                    "zhName": "捷克",
+                    "enName": "Czech Republic",
+                    "code": "203"
+                },
+                {
+                    "zhName": "津巴布韦",
+                    "enName": "Zimbabwe",
+                    "code": "716"
+                }
+            ]
+        },
+        {
+            "indexChar": "K",
+            "list": [
+                {
+                    "zhName": "喀麦隆",
+                    "enName": "Cameroon",
+                    "code": "120"
+                },
+                {
+                    "zhName": "卡塔尔",
+                    "enName": "Qatar",
+                    "code": "634"
+                },
+                {
+                    "zhName": "开曼群岛",
+                    "enName": "Cayman Islands",
+                    "code": "136"
+                },
+                {
+                    "zhName": "科科斯（基林）群岛",
+                    "enName": "Cocos (Keeling) Islands",
+                    "code": "166"
+                },
+                {
+                    "zhName": "克罗地亚",
+                    "enName": "Croatia",
+                    "code": "191"
+                },
+                {
+                    "zhName": "科摩罗",
+                    "enName": "Comoros",
+                    "code": "174"
+                },
+                {
+                    "zhName": "科特迪瓦",
+                    "enName": "Côte d'Ivoire",
+                    "code": "384"
+                },
+                {
+                    "zhName": "科威特",
+                    "enName": "Kuwait",
+                    "code": "414"
+                },
+                {
+                    "zhName": "肯尼亚",
+                    "enName": "Kenya",
+                    "code": "404"
+                },
+                {
+                    "zhName": "库克群岛",
+                    "enName": "Cook Islands",
+                    "code": "184"
+                }
+            ]
+        },
+        {
+            "indexChar": "L",
+            "list": [
+                {
+                    "zhName": "拉脱维亚",
+                    "enName": "Latvia",
+                    "code": "428"
+                },
+                {
+                    "zhName": "莱索托",
+                    "enName": "Lesotho",
+                    "code": "426"
+                },
+                {
+                    "zhName": "老挝",
+                    "enName": "Lao People's Democratic Republic",
+                    "code": "418"
+                },
+                {
+                    "zhName": "黎巴嫩",
+                    "enName": "Lebanon",
+                    "code": "422"
+                },
+                {
+                    "zhName": "利比里亚",
+                    "enName": "Liberia",
+                    "code": "430"
+                },
+                {
+                    "zhName": "利比亚",
+                    "enName": "Libyan Arab Jamahiriya",
+                    "code": "434"
+                },
+                {
+                    "zhName": "立陶宛",
+                    "enName": "Lithuania",
+                    "code": "440"
+                },
+                {
+                    "zhName": "列支敦士登",
+                    "enName": "Liechtenstein",
+                    "code": "438"
+                },
+                {
+                    "zhName": "留尼汪",
+                    "enName": "Réunion",
+                    "code": "638"
+                },
+                {
+                    "zhName": "卢森堡",
+                    "enName": "Luxembourg",
+                    "code": "442"
+                },
+                {
+                    "zhName": "卢旺达",
+                    "enName": "Rwanda",
+                    "code": "646"
+                },
+                {
+                    "zhName": "罗马尼亚",
+                    "enName": "Romania",
+                    "code": "642"
+                }
+            ]
+        },
+        {
+            "indexChar": "M",
+            "list": [
+                {
+                    "zhName": "马达加斯加",
+                    "enName": "Madagascar",
+                    "code": "450"
+                },
+                {
+                    "zhName": "马尔代夫",
+                    "enName": "Maldives",
+                    "code": "462"
+                },
+                {
+                    "zhName": "马耳他",
+                    "enName": "Malta",
+                    "code": "470"
+                },
+                {
+                    "zhName": "马拉维",
+                    "enName": "Malawi",
+                    "code": "454"
+                },
+                {
+                    "zhName": "马来西亚",
+                    "enName": "Malaysia",
+                    "code": "458"
+                },
+                {
+                    "zhName": "马里",
+                    "enName": "Mali",
+                    "code": "466"
+                },
+                {
+                    "zhName": "马绍尔群岛",
+                    "enName": "Marshall Islands",
+                    "code": "584"
+                },
+                {
+                    "zhName": "马提尼克",
+                    "enName": "Martinique",
+                    "code": "474"
+                },
+                {
+                    "zhName": "马约特",
+                    "enName": "Mayotte",
+                    "code": "175"
+                },
+                {
+                    "zhName": "毛里求斯",
+                    "enName": "Mauritius",
+                    "code": "480"
+                },
+                {
+                    "zhName": "毛利塔尼亚",
+                    "enName": "Mauritania",
+                    "code": "478"
+                },
+                {
+                    "zhName": "美国",
+                    "enName": "United States",
+                    "code": "840"
+                },
+                {
+                    "zhName": "美国本土外小岛屿",
+                    "enName": "United States Minor Outlying Islands",
+                    "code": "581"
+                },
+                {
+                    "zhName": "美属萨摩亚",
+                    "enName": "American Samoa",
+                    "code": "016"
+                },
+                {
+                    "zhName": "美属维尔京群岛",
+                    "enName": "Virgin Islands (U.S.)",
+                    "code": "850"
+                },
+                {
+                    "zhName": "蒙古",
+                    "enName": "Mongolia",
+                    "code": "496"
+                },
+                {
+                    "zhName": "孟加拉国",
+                    "enName": "Bangladesh",
+                    "code": "050"
+                },
+                {
+                    "zhName": "蒙特塞拉特",
+                    "enName": "Montserrat",
+                    "code": "500"
+                },
+                {
+                    "zhName": "密克罗尼西亚联邦",
+                    "enName": "Micronesia",
+                    "code": "583"
+                },
+                {
+                    "zhName": "秘鲁",
+                    "enName": "Peru",
+                    "code": "604"
+                },
+                {
+                    "zhName": "缅甸",
+                    "enName": "Myanmar",
+                    "code": "104"
+                },
+                {
+                    "zhName": "摩尔多瓦",
+                    "enName": "Moldova",
+                    "code": "498"
+                },
+                {
+                    "zhName": "摩洛哥",
+                    "enName": "Morocco",
+                    "code": "504"
+                },
+                {
+                    "zhName": "摩纳哥",
+                    "enName": "Monaco",
+                    "code": "492"
+                },
+                {
+                    "zhName": "莫桑比克",
+                    "enName": "Mozambique",
+                    "code": "508"
+                },
+                {
+                    "zhName": "墨西哥",
+                    "enName": "Mexico",
+                    "code": "484"
+                }
+            ]
+        },
+        {
+            "indexChar": "N",
+            "list": [
+                {
+                    "zhName": "纳米比亚",
+                    "enName": "Namibia",
+                    "code": "516"
+                },
+                {
+                    "zhName": "南非",
+                    "enName": "South Africa",
+                    "code": "710"
+                },
+                {
+                    "zhName": "南极洲",
+                    "enName": "Antarctica",
+                    "code": "010"
+                },
+                {
+                    "zhName": "南乔治亚岛和南桑德韦奇岛",
+                    "enName": "South Georgia and the South Sandwich Islands",
+                    "code": "239"
+                },
+                {
+                    "zhName": "瑙鲁",
+                    "enName": "Nauru",
+                    "code": "520"
+                },
+                {
+                    "zhName": "尼泊尔",
+                    "enName": "Nepal",
+                    "code": "524"
+                },
+                {
+                    "zhName": "尼加拉瓜",
+                    "enName": "Nicaragua",
+                    "code": "558"
+                },
+                {
+                    "zhName": "尼日尔",
+                    "enName": "Niger",
+                    "code": "562"
+                },
+                {
+                    "zhName": "尼日利亚",
+                    "enName": "Nigeria",
+                    "code": "566"
+                },
+                {
+                    "zhName": "纽埃",
+                    "enName": "Niue",
+                    "code": "570"
+                },
+                {
+                    "zhName": "诺福克岛",
+                    "enName": "Norfolk Island",
+                    "code": "574"
+                },
+                {
+                    "zhName": "挪威",
+                    "enName": "Norway",
+                    "code": "578"
+                }
+            ]
+        },
+        {
+            "indexChar": "P",
+            "list": [
+                {
+                    "zhName": "帕劳",
+                    "enName": "Palau",
+                    "code": "585"
+                },
+                {
+                    "zhName": "皮特凯恩",
+                    "enName": "Pitcairn",
+                    "code": "612"
+                },
+                {
+                    "zhName": "葡萄牙",
+                    "enName": "Portugal",
+                    "code": "620"
+                }
+            ]
+        },
+        {
+            "indexChar": "Q",
+            "list": [
+                {
+                    "zhName": "前南马其顿",
+                    "enName": "Macedonia",
+                    "code": "807"
+                }
+            ]
+        },
+        {
+            "indexChar": "R",
+            "list": [
+                {
+                    "zhName": "日本",
+                    "enName": "Japan",
+                    "code": "392"
+                },
+                {
+                    "zhName": "瑞典",
+                    "enName": "Sweden",
+                    "code": "752"
+                },
+                {
+                    "zhName": "瑞士",
+                    "enName": "Switzerland",
+                    "code": "756"
+                }
+            ]
+        },
+        {
+            "indexChar": "S",
+            "list": [
+                {
+                    "zhName": "萨尔瓦多",
+                    "enName": "El Salvador",
+                    "code": "222"
+                },
+                {
+                    "zhName": "萨摩亚",
+                    "enName": "Samoa",
+                    "code": "882"
+                },
+                {
+                    "zhName": "塞尔维亚",
+                    "enName": "Serbia",
+                    "code": "688"
+                },
+                {
+                    "zhName": "塞拉利昂",
+                    "enName": "Sierra Leone",
+                    "code": "694"
+                },
+                {
+                    "zhName": "塞内加尔",
+                    "enName": "Senegal",
+                    "code": "686"
+                },
+                {
+                    "zhName": "塞浦路斯",
+                    "enName": "Cyprus",
+                    "code": "196"
+                },
+                {
+                    "zhName": "塞舌尔",
+                    "enName": "Seychelles",
+                    "code": "690"
+                },
+                {
+                    "zhName": "沙特阿拉伯",
+                    "enName": "Saudi Arabia",
+                    "code": "682"
+                },
+                {
+                    "zhName": "圣诞岛",
+                    "enName": "Christmas Island",
+                    "code": "162"
+                },
+                {
+                    "zhName": "圣多美和普林西比",
+                    "enName": "Sao Tome and Principe",
+                    "code": "678"
+                },
+                {
+                    "zhName": "圣赫勒拿",
+                    "enName": "Saint Helena",
+                    "code": "654"
+                },
+                {
+                    "zhName": "圣基茨和尼维斯",
+                    "enName": "Saint Kitts and Nevis",
+                    "code": "659"
+                },
+                {
+                    "zhName": "圣卢西亚",
+                    "enName": "Saint Lucia",
+                    "code": "662"
+                },
+                {
+                    "zhName": "圣马力诺",
+                    "enName": "San Marino",
+                    "code": "674"
+                },
+                {
+                    "zhName": "圣皮埃尔和密克隆",
+                    "enName": "Saint Pierre and Miquelon",
+                    "code": "666"
+                },
+                {
+                    "zhName": "圣文森特和格林纳丁斯",
+                    "enName": "Saint Vincent and the Grenadines",
+                    "code": "670"
+                },
+                {
+                    "zhName": "斯里兰卡",
+                    "enName": "Sri Lanka",
+                    "code": "144"
+                },
+                {
+                    "zhName": "斯洛伐克",
+                    "enName": "Slovakia",
+                    "code": "703"
+                },
+                {
+                    "zhName": "斯洛文尼亚",
+                    "enName": "Slovenia",
+                    "code": "705"
+                },
+                {
+                    "zhName": "斯瓦尔巴岛和扬马延岛",
+                    "enName": "Svalbard and Jan Mayen",
+                    "code": "744"
+                },
+                {
+                    "zhName": "斯威士兰",
+                    "enName": "Swaziland",
+                    "code": "748"
+                },
+                {
+                    "zhName": "苏丹",
+                    "enName": "Sudan",
+                    "code": "736"
+                },
+                {
+                    "zhName": "苏里南",
+                    "enName": "Suriname",
+                    "code": "740"
+                },
+                {
+                    "zhName": "所罗门群岛",
+                    "enName": "Solomon Islands",
+                    "code": "090"
+                },
+                {
+                    "zhName": "索马里",
+                    "enName": "Somalia",
+                    "code": "706"
+                }
+            ]
+        },
+        {
+            "indexChar": "T",
+            "list": [
+                {
+                    "zhName": "塔吉克斯坦",
+                    "enName": "Tajikistan",
+                    "code": "762"
+                },
+                {
+                    "zhName": "泰国",
+                    "enName": "Thailand",
+                    "code": "764"
+                },
+                {
+                    "zhName": "坦桑尼亚",
+                    "enName": "Tanzania",
+                    "code": "834"
+                },
+                {
+                    "zhName": "汤加",
+                    "enName": "Tonga",
+                    "code": "776"
+                },
+                {
+                    "zhName": "特克斯和凯科斯群岛",
+                    "enName": "Turks and Caicos Islands",
+                    "code": "796"
+                },
+                {
+                    "zhName": "特立尼达和多巴哥",
+                    "enName": "Trinidad and Tobago",
+                    "code": "780"
+                },
+                {
+                    "zhName": "土耳其",
+                    "enName": "Turkey",
+                    "code": "792"
+                },
+                {
+                    "zhName": "土库曼斯坦",
+                    "enName": "Turkmenistan",
+                    "code": "795"
+                },
+                {
+                    "zhName": "突尼斯",
+                    "enName": "Tunisia",
+                    "code": "788"
+                },
+                {
+                    "zhName": "图瓦卢",
+                    "enName": "Tuvalu",
+                    "code": "798"
+                },
+                {
+                    "zhName": "托克劳",
+                    "enName": "Tokelau",
+                    "code": "772"
+                }
+            ]
+        },
+        {
+            "indexChar": "W",
+            "list": [
+                {
+                    "zhName": "瓦利斯和富图纳",
+                    "enName": "Wallis and Futuna",
+                    "code": "876"
+                },
+                {
+                    "zhName": "瓦努阿图",
+                    "enName": "Vanuatu",
+                    "code": "548"
+                },
+                {
+                    "zhName": "危地马拉",
+                    "enName": "Guatemala",
+                    "code": "320"
+                },
+                {
+                    "zhName": "委内瑞拉",
+                    "enName": "Venezuela",
+                    "code": "862"
+                },
+                {
+                    "zhName": "文莱",
+                    "enName": "Brunei Darussalam",
+                    "code": "096"
+                },
+                {
+                    "zhName": "乌干达",
+                    "enName": "Uganda",
+                    "code": "800"
+                },
+                {
+                    "zhName": "乌克兰",
+                    "enName": "Ukraine",
+                    "code": "804"
+                },
+                {
+                    "zhName": "乌拉圭",
+                    "enName": "Uruguay",
+                    "code": "858"
+                },
+                {
+                    "zhName": "乌兹别克斯坦",
+                    "enName": "Uzbekistan",
+                    "code": "860"
+                }
+            ]
+        },
+        {
+            "indexChar": "X",
+            "list": [
+                {
+                    "zhName": "西班牙",
+                    "enName": "Spain",
+                    "code": "724"
+                },
+                {
+                    "zhName": "希腊",
+                    "enName": "Greece",
+                    "code": "300"
+                },
+                {
+                    "zhName": "西撒哈拉",
+                    "enName": "Western Sahara",
+                    "code": "732"
+                },
+                {
+                    "zhName": "新加坡",
+                    "enName": "Singapore",
+                    "code": "702"
+                },
+                {
+                    "zhName": "新喀里多尼亚",
+                    "enName": "New Caledonia",
+                    "code": "540"
+                },
+                {
+                    "zhName": "新西兰",
+                    "enName": "New Zealand",
+                    "code": "554"
+                },
+                {
+                    "zhName": "匈牙利",
+                    "enName": "Hungary",
+                    "code": "348"
+                },
+                {
+                    "zhName": "叙利亚",
+                    "enName": "Syrian Arab Republic",
+                    "code": "760"
+                }
+            ]
+        },
+        {
+            "indexChar": "Y",
+            "list": [
+                {
+                    "zhName": "牙买加",
+                    "enName": "Jamaica",
+                    "code": "388"
+                },
+                {
+                    "zhName": "亚美尼亚",
+                    "enName": "Armenia",
+                    "code": "051"
+                },
+                {
+                    "zhName": "也门",
+                    "enName": "Yemen",
+                    "code": "887"
+                },
+                {
+                    "zhName": "意大利",
+                    "enName": "Italy",
+                    "code": "380"
+                },
+                {
+                    "zhName": "伊拉克",
+                    "enName": "Iraq",
+                    "code": "368"
+                },
+                {
+                    "zhName": "伊朗",
+                    "enName": "Iran",
+                    "code": "364"
+                },
+                {
+                    "zhName": "以色列",
+                    "enName": "Israel",
+                    "code": "376"
+                },
+                {
+                    "zhName": "印度",
+                    "enName": "India",
+                    "code": "356"
+                },
+                {
+                    "zhName": "印度尼西亚",
+                    "enName": "Indonesia",
+                    "code": "360"
+                },
+                {
+                    "zhName": "英国",
+                    "enName": "United Kingdom",
+                    "code": "826"
+                },
+                {
+                    "zhName": "英国属地曼岛",
+                    "enName": "Isle of Man",
+                    "code": "833"
+                },
+                {
+                    "zhName": "英属维尔京群岛",
+                    "enName": "Virgin Islands (British)",
+                    "code": "092"
+                },
+                {
+                    "zhName": "英属印度洋领地",
+                    "enName": "British Indian Ocean Territory",
+                    "code": "086"
+                },
+                {
+                    "zhName": "约旦",
+                    "enName": "Jordan",
+                    "code": "400"
+                },
+                {
+                    "zhName": "越南",
+                    "enName": "Viet Nam",
+                    "code": "704"
+                }
+            ]
+        },
+        {
+            "indexChar": "Z",
+            "list": [
+                {
+                    "zhName": "赞比亚",
+                    "enName": "Zambia",
+                    "code": "894"
+                },
+                {
+                    "zhName": "泽西岛",
+                    "enName": "Jersey",
+                    "code": "832"
+                },
+                {
+                    "zhName": "乍得",
+                    "enName": "Chad",
+                    "code": "148"
+                },
+                {
+                    "zhName": "直布罗陀",
+                    "enName": "Gibraltar",
+                    "code": "292"
+                },
+                {
+                    "zhName": "智利",
+                    "enName": "Chile",
+                    "code": "152"
+                },
+                {
+                    "zhName": "中非",
+                    "enName": "Central African Republic",
+                    "code": "140"
+                },
+                {
+                    "zhName": "中国",
+                    "enName": "China",
+                    "code": "156"
+                },
+                {
+                    "zhName": "中国澳门",
+                    "enName": "Macao, China",
+                    "code": "446"
+                },
+                {
+                    "zhName": "中国台湾",
+                    "enName": "Taiwan, China",
+                    "code": "158"
+                },
+                {
+                    "zhName": "中国香港",
+                    "enName": "Hong Kong, China",
+                    "code": "344"
+                }
+            ]
+        }
+    ]
+}
