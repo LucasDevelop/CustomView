@@ -23,6 +23,16 @@ class ExampleUnitTest {
 
     @Test
     fun time() {
+        List(100) { it }.forEach {
+            var message = 3_000L shl it
+            if (it>10)
+                message = 3600_000L
+            if (message>3600_000L*24*3)
+                println("----------")
+            println(message)
+        }
+
+
 //        val dateFormat = SimpleDateFormat("yyyy/MM/dd", Locale("ar"))
 //        val format = dateFormat.format(Date())
 //        println(format)
@@ -44,7 +54,7 @@ class ExampleUnitTest {
 //        println(message)
 //        println(message.length)
 
-        println((0x10 or 2))
+//        println((0x10 or 2))
     }
 
 

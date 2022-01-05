@@ -2,6 +2,7 @@ package com.cj.customwidget
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.webkit.WebSettings
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
