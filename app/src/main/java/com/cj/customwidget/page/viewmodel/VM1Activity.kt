@@ -16,7 +16,7 @@ class VM1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         injectViewModel()
-        vm.p()
+        "page:${this::class.java.simpleName},vm:${vm}".p()
         setContentView(R.layout.activity_v_m1)
         v_open.setOnClickListener { startActivity(Intent(this,VM2Activity::class.java)) }
     }

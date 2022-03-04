@@ -12,7 +12,7 @@ import androidx.lifecycle.*
 
 private val vMStores = HashMap<String, VMStore>()
 
-fun ComponentActivity.injectViewModel() {
+fun LifecycleOwner.injectViewModel() {
     //根据作用域创建商店
     this::class.java.declaredFields.forEach { field ->
         field.getAnnotation(VMScope::class.java)?.also { scope ->
