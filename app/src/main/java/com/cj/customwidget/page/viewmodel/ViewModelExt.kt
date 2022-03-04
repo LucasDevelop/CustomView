@@ -1,6 +1,5 @@
 package com.cj.customwidget.page.viewmodel
 
-import androidx.activity.ComponentActivity
 import androidx.lifecycle.*
 
 /**
@@ -26,7 +25,7 @@ fun LifecycleOwner.injectViewModel() {
             }
             store.register(this)
             val clazz = field.type as Class<ViewModel>
-            val vm = ViewModelProvider(store, VMFactory()).get(clazz)
+            val vm = ViewModelProvider(store, ViewModelProvider.NewInstanceFactory()).get(clazz)
             field.set(this, vm)
         }
     }
@@ -64,11 +63,5 @@ class VMStore : ViewModelStoreOwner {
     }
 }
 
-class VMFactory : ViewModelProvider.Factory {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return modelClass.newInstance()
-    }
-
-}
 
 

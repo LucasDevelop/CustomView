@@ -17,7 +17,7 @@ class VMFragment: Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         injectViewModel()
-        vm.test()
+//        vm.test()
         "page:${this::class.java.simpleName},vm:${vm}".p()
     }
 

@@ -1,6 +1,7 @@
 package com.cj.customwidget.page.viewmodel
 
-import java.lang.annotation.RetentionPolicy
+import androidx.lifecycle.ViewModelProvider
+import kotlin.reflect.KClass
 
 /**
  * @package    com.cj.customwidget.page.viewmodel
@@ -10,5 +11,4 @@ import java.lang.annotation.RetentionPolicy
  */
 @Retention(AnnotationRetention.RUNTIME)
 @Target(AnnotationTarget.FIELD)
-annotation class VMScope(val scopeName:String) {
-}
+annotation class VMScope(val scopeName:String)
