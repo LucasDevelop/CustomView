@@ -8,15 +8,17 @@ import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import com.cj.customwidget.R
 import com.cj.customwidget.ext.p
+import com.cj.customwidget.page.viewmodelv2.shareViewModels
 
 class VMFragment: Fragment() {
 
-    @VMScope("lucas")
-    lateinit var vm: ViewModel1
+//    @VMScope("lucas")
+//    lateinit var vm: ViewModel1
+     val vm:ViewModel1 by shareViewModels("lucas")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        injectViewModel()
+//        injectViewModel()
 //        vm.test()
         "page:${this::class.java.simpleName},vm:${vm}".p()
     }
